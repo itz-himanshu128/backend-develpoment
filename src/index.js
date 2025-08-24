@@ -5,7 +5,7 @@
 import dotenv from 'dotenv'
 
 import connectDB from './db/index' 
-
+import { app } from './app'
 // in this second aporach we we write code in any other file then in index file we only import the function and execute.
 
 dotenv.config({
