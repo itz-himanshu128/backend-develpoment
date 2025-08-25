@@ -11,3 +11,4 @@ class ApiResponse{
         // server error message (500-599)
     }
 }
+export { ApiResponse }

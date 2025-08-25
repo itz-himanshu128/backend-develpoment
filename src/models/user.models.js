@@ -68,7 +68,7 @@ userSchema.pre("save", async function(next){
 
     if(!this.isModified("password")) return next();
     
-    this.password= bcrypt.hash(this.password,10)        // here we encrypt the password and tell that how many rounds it needs to perform.
+    this.password= await bcrypt.hash(this.password,10)        // here we encrypt the password and tell that how many rounds it needs to perform.
     next()
 
 })          // do not use ()=>{} this call back in this pre hook because it does not have refrence of ".this" because we need to access values from the above schema.
@@ -109,6 +109,6 @@ userSchema.methods.generateRefreshToken=function(){
     )
 }
 
-userSchema.methods.generateRefreshToken=function(){}
+// userSchema.methods.generateRefreshToken=function(){}
 
 export const user = mongoose .model("User",userSchema)

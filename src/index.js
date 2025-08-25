@@ -2,10 +2,10 @@
 
 // require ('dotenv').config({path: './env'})   
 // this breaks the consistency of code so that is why there is another process to write it 
-import dotenv from 'dotenv'
+import dotenv from "dotenv"
 
-import connectDB from './db/index' 
-import { app } from './app'
+import connectDB from './db/index.js' 
+import { app } from './app.js'
 // in this second aporach we we write code in any other file then in index file we only import the function and execute.
 
 dotenv.config({
